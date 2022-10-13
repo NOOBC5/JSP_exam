@@ -55,7 +55,7 @@
                     </form>
             </div>
         </div>
-        <div class=col-lg=4"></div>
+        <div class="col-lg=4"></div>
     </div>
     </nav>
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
