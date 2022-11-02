@@ -2,6 +2,9 @@ package common;
 
 import java.sql.Connection;
 import java.sql.Statement;
+
+import javax.servlet.ServletContext;
+
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.DriverManager;
@@ -21,10 +24,39 @@ public class JDBConnect {
 			String pw = "1234";
 			
 			conn = DriverManager.getConnection(url, id, pw);
-			System.out.println("DB 연결 완료!!!!");
+			System.out.println("DB 연결 완료!!!! (생성자 버전 1)");
 			
 		}
 		catch(Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public JDBConnect(String driver, String url, String id, String pw) {
+		try {
+			
+			Class.forName(driver);
+			conn = DriverManager.getConnection(url, id, pw);
+			
+			System.out.println("DB 연결 완료! (생성자 버전 2)");
+		} catch(Exception e) {
+			e.printStackTrace();
+		} 
+	}
+	
+	public JDBConnect(ServletContext application) {
+		try {
+			String driver = application.getInitParameter("OracleDriver");
+			String url = application.getInitParameter("OracleURL");
+			String id = application.getInitParameter("OracleId");
+			String pw = application.getInitParameter("OraclePw");
+			
+			Class.forName(driver);
+			conn = DriverManager.getConnection(url, id, pw);
+			
+			System.out.println("DB 연결 완료! (생성자 버전3)");
+		}
+		catch(Exception e){
 			e.printStackTrace();
 		}
 	}
