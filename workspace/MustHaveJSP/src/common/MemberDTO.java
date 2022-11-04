@@ -2,51 +2,46 @@ package common;
 
 public class MemberDTO {
 	private String id;
-	private String pwd;
+	private String pw;
 	private String name;
+	private String regidate;
 	
-	
-
 	public String getId() {
 		return id;
 	}
-
-
-
 	public void setId(String id) {
 		this.id = id;
 	}
-
-
-
-	public String getPwd() {
-		return pwd;
+	public String getPw() {
+		return pw;
 	}
-
-
-
-	public void setPwd(String pwd) {
-		this.pwd = pwd;
+	public void setPw(String pw) {
+		this.pw = pw;
 	}
-
-
-
 	public String getName() {
 		return name;
 	}
-
-
-
 	public void setName(String name) {
 		this.name = name;
 	}
-
-
-
-	public MemberDTO(String id, String pwd, String name){
-		super();
-		this.id = id;
-		this.pwd = pwd;
-		this.name = name;
+	public String getRegidate() {
+		return regidate;
 	}
+	public void setRegidate(String regidate) {
+		this.regidate = regidate;
+	}
+	
+	public MemberDTO(){
+		super();
+		
+	}
+	@Override
+	public String toString() {
+		return "MemberDTO [id=" + id + ", pw=" + pw + ", name=" + name + ", regidate=" + regidate + "]";
+	}
+	
+	
+	
+	
+	
 }

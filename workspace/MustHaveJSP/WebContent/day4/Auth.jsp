@@ -12,13 +12,13 @@
 
 <%
     String id = request.getParameter("id");
-    String pwd = request.getParameter("pwd");
+    String pw = request.getParameter("pw");
     String name =request.getParameter("name");
     
     //MemberDTO m1 = new MemberDTO(id, pwd, name);
     //application.setAttribute("memberInfo", m1);
 
-    application.setAttribute("requestMemberDTO", new MemberDTO(id, pwd, name));
+    application.setAttribute("requestMemberDTO", new MemberDTO());
 
     request.getRequestDispatcher("Login.jsp").forward(request,response);
 %>
