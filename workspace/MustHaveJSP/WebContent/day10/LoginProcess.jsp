@@ -13,12 +13,7 @@
 	String userId = request.getParameter("user_id");
 	String userPw = request.getParameter("user_pw");
 	
-	String oracleDriver = application.getInitParameter("OracleDriver");
-	String oracleURL =application.getInitParameter("OracleURL");
-	String oracleId = application.getInitParameter("OracleId");
-	String oraclePw = application.getInitParameter("OraclePw");
-		
-	MemberDAO dao = new MemberDAO(oracleDriver, oracleURL, oracleId, oraclePw);
+	MemberDAO dao = new MemberDAO(application);
 	MemberDTO memberDTO = dao.getMemberDTO(userId, userPw);
 	dao.close();
 	

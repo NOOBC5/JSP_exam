@@ -35,6 +35,7 @@
 	%>
 	<%=session.getAttribute("UserName") %> 회원님, 로그인하셨습니다. <br />
 	<a href="Logout.jsp">[로그아웃]</a>
+	<a href="deleteForm.jsp">[회원탈퇴]</a>
 	<%
 	}
 	%>

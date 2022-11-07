@@ -16,7 +16,7 @@
     request.setAttribute("requestname", MemberDTO1.getName());
     //System.out.println(MemberDTO1.toString());
 
-    if(Login_id.equalsIgnoreCase(MemberDTO1.getId()) && Login_pwd.equalsIgnoreCase(MemberDTO1.getPwd())) {
+    if(Login_id.equalsIgnoreCase(MemberDTO1.getId()) && Login_pwd.equalsIgnoreCase(MemberDTO1.getPw())) {
         request.getRequestDispatcher("Welcome.jsp")
         .forward(request,response);
     } else {
