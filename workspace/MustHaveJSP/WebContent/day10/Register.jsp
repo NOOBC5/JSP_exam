@@ -25,6 +25,7 @@
 		}
 	</script>
     <h1>회원가입</h1>
+    <a href="LoginForm.jsp">[로그인창으로]</a>
     <form action="RegisterAction.jsp" method="post">
         <label><strong>ID</strong> 
             <input type="text" name="user_id" placeholder="ID를 입력하세요" required>
@@ -35,7 +36,7 @@
         </label>
         <br>
         <label><strong>Name</strong>
-            <input type="text" name="name" placeholder="영어 이름을 적어주세요" required>
+            <input type="text" name="name" placeholder="이름을 적어주세요" required>
         </label>
         <br>
         <input type="submit" value="회원가입">
